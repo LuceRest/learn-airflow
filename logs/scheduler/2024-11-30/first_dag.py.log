@@ -649,3 +649,101 @@
 [2024-11-30T20:15:28.386+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:15:28.386+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2024-11-30T20:15:28.423+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:15:28.423+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
 [2024-11-30T20:15:28.456+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.137 seconds
+[2024-11-30T20:15:59.107+0000] {processor.py:186} INFO - Started process (PID=2192) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:15:59.109+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:15:59.111+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:15:59.110+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:15:59.146+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:15:59.188+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:15:59.188+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:15:59.235+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:15:59.235+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:15:59.270+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.173 seconds
+[2024-11-30T20:16:29.831+0000] {processor.py:186} INFO - Started process (PID=2208) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:16:29.832+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:16:29.833+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:16:29.833+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:16:29.863+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:16:29.899+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:16:29.899+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:16:29.951+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:16:29.950+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:16:29.996+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.173 seconds
+[2024-11-30T20:17:00.427+0000] {processor.py:186} INFO - Started process (PID=2224) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:17:00.429+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:17:00.431+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:17:00.431+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:17:00.470+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:17:00.526+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:17:00.526+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:17:00.575+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:17:00.575+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:17:00.611+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.193 seconds
+[2024-11-30T20:17:30.993+0000] {processor.py:186} INFO - Started process (PID=2246) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:17:30.994+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:17:30.996+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:17:30.996+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:17:31.025+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:17:31.069+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:17:31.069+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:17:31.110+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:17:31.109+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:17:31.143+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.156 seconds
+[2024-11-30T20:18:01.556+0000] {processor.py:186} INFO - Started process (PID=2262) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:18:01.557+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:18:01.559+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:18:01.559+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:18:01.586+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:18:01.622+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:18:01.621+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:18:01.655+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:18:01.655+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:18:01.684+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.135 seconds
+[2024-11-30T20:18:32.054+0000] {processor.py:186} INFO - Started process (PID=2278) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:18:32.056+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:18:32.058+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:18:32.058+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:18:32.087+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:18:32.118+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:18:32.117+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:18:32.153+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:18:32.153+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:18:32.182+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.134 seconds
+[2024-11-30T20:19:02.546+0000] {processor.py:186} INFO - Started process (PID=2294) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:19:02.548+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:19:02.550+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:19:02.550+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:19:02.581+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:19:02.615+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:19:02.615+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:19:02.648+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:19:02.647+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:19:02.679+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.141 seconds
+[2024-11-30T20:19:33.060+0000] {processor.py:186} INFO - Started process (PID=2310) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:19:33.062+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:19:33.064+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:19:33.064+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:19:33.094+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:19:33.125+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:19:33.125+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:19:33.156+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:19:33.155+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:19:33.185+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.133 seconds
+[2024-11-30T20:20:03.541+0000] {processor.py:186} INFO - Started process (PID=2326) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:20:03.543+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:20:03.545+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:20:03.545+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:20:03.579+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:20:03.618+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:20:03.618+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:20:03.657+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:20:03.657+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:20:03.690+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.157 seconds
+[2024-11-30T20:20:34.122+0000] {processor.py:186} INFO - Started process (PID=2342) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:20:34.123+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:20:34.126+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:20:34.125+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:20:34.158+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:20:34.220+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:20:34.219+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:20:34.263+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:20:34.263+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:20:34.290+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.180 seconds
+[2024-11-30T20:21:04.643+0000] {processor.py:186} INFO - Started process (PID=2358) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:21:04.644+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:21:04.647+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:21:04.646+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:21:04.678+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:21:04.718+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:21:04.717+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:21:04.755+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:21:04.755+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:21:04.981+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.346 seconds
+[2024-11-30T20:21:35.359+0000] {processor.py:186} INFO - Started process (PID=2374) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:21:35.360+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:21:35.362+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:21:35.361+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:21:35.390+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:21:35.432+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:21:35.431+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:21:35.465+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:21:35.465+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:21:35.491+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.139 seconds
+[2024-11-30T20:22:05.894+0000] {processor.py:186} INFO - Started process (PID=2390) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:22:05.896+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:22:05.898+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:22:05.898+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:22:05.935+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:22:05.971+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:22:05.970+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:22:06.019+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:22:06.018+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:22:06.059+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.174 seconds
+[2024-11-30T20:22:36.651+0000] {processor.py:186} INFO - Started process (PID=2406) to work on /opt/airflow/dags/first_dag.py
+[2024-11-30T20:22:36.652+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-11-30T20:22:36.654+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:22:36.654+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:22:36.691+0000] {processor.py:925} INFO - DAG(s) 'fist_dag_v5' retrieved from /opt/airflow/dags/first_dag.py
+[2024-11-30T20:22:36.746+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:22:36.746+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-30T20:22:36.801+0000] {logging_mixin.py:190} INFO - [2024-11-30T20:22:36.800+0000] {dag.py:4180} INFO - Setting next_dagrun for fist_dag_v5 to 2024-11-30 00:00:00+00:00, run_after=2024-12-01 00:00:00+00:00
+[2024-11-30T20:22:36.848+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_dag.py took 0.205 seconds

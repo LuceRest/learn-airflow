@@ -1,0 +1,18 @@
+[2024-12-17T01:30:39.201+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-17T01:30:39.307+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fist_dag_using_python_operator_v06.get_name scheduled__2024-12-10T00:00:00+00:00 [queued]>
+[2024-12-17T01:30:39.374+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fist_dag_using_python_operator_v06.get_name scheduled__2024-12-10T00:00:00+00:00 [queued]>
+[2024-12-17T01:30:39.375+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 6
+[2024-12-17T01:30:39.441+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): get_name> on 2024-12-10 00:00:00+00:00
+[2024-12-17T01:30:39.471+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=178) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-17T01:30:39.478+0000] {standard_task_runner.py:72} INFO - Started process 193 to run task
+[2024-12-17T01:30:39.497+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fist_dag_using_python_operator_v06', 'get_name', 'scheduled__2024-12-10T00:00:00+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/create_dag_with_python_operator.py', '--cfg-path', '/tmp/tmppq4pt9tg']
+[2024-12-17T01:30:39.513+0000] {standard_task_runner.py:105} INFO - Job 82: Subtask get_name
+[2024-12-17T01:30:39.928+0000] {task_command.py:467} INFO - Running <TaskInstance: fist_dag_using_python_operator_v06.get_name scheduled__2024-12-10T00:00:00+00:00 [running]> on host ba06481f48a9
+[2024-12-17T01:30:40.701+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ARest' AIRFLOW_CTX_DAG_ID='fist_dag_using_python_operator_v06' AIRFLOW_CTX_TASK_ID='get_name' AIRFLOW_CTX_EXECUTION_DATE='2024-12-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-10T00:00:00+00:00'
+[2024-12-17T01:30:40.709+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-17T01:30:41.058+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-17T01:30:41.098+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-17T01:30:41.102+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=fist_dag_using_python_operator_v06, task_id=get_name, run_id=scheduled__2024-12-10T00:00:00+00:00, execution_date=20241210T000000, start_date=20241217T013039, end_date=20241217T013041
+[2024-12-17T01:30:41.303+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-17T01:30:41.458+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-17T01:30:41.470+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
