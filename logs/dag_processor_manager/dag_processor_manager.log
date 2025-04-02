@@ -25638,3 +25638,18 @@ File Path                                             PID    Runtime      # DAGs
 /opt/airflow/dags/create_dag_with_python_operator.py                           1           0  0.40s           2025-04-01T11:03:10                      12
 /opt/airflow/dags/dag_with_taskflow_api.py                                     1           0  0.20s           2025-04-01T11:03:20                      12
 ================================================================================
+[2025-04-02T19:54:41.460+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2025-04-02T19:54:41.464+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-04-02T19:54:41.466+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-04-02T19:54:41.469+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-04-02T19:54:41.617+0000] {manager.py:824} INFO - There are 3 files in /opt/airflow/dags
+[2025-04-02T19:54:41.850+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/create_dag_with_python_operator.py    183  0.05s             0           0                                                   0
+/opt/airflow/dags/dag_with_taskflow_api.py              180  0.07s             0           0                                                   0
+/opt/airflow/dags/first_dag.py                                                 0           0                                                   0
+================================================================================
