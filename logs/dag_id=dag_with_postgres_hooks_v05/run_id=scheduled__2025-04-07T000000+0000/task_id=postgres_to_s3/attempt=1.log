@@ -1,0 +1,171 @@
+[2025-04-13T04:42:02.812+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-13T04:42:02.991+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_postgres_hooks_v05.postgres_to_s3 scheduled__2025-04-07T00:00:00+00:00 [queued]>
+[2025-04-13T04:42:03.134+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_postgres_hooks_v05.postgres_to_s3 scheduled__2025-04-07T00:00:00+00:00 [queued]>
+[2025-04-13T04:42:03.139+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 6
+[2025-04-13T04:42:03.334+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): postgres_to_s3> on 2025-04-07 00:00:00+00:00
+[2025-04-13T04:42:03.437+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_with_postgres_hooks_v05', 'postgres_to_s3', 'scheduled__2025-04-07T00:00:00+00:00', '--job-id', '1060', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_postgres_hooks.py', '--cfg-path', '/tmp/tmpzy2pti_1']
+[2025-04-13T04:42:03.453+0000] {standard_task_runner.py:105} INFO - Job 1060: Subtask postgres_to_s3
+[2025-04-13T04:42:03.439+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=2542) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-13T04:42:03.498+0000] {standard_task_runner.py:72} INFO - Started process 2560 to run task
+[2025-04-13T04:42:03.965+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_with_postgres_hooks_v05.postgres_to_s3 scheduled__2025-04-07T00:00:00+00:00 [running]> on host e9ff53ca7e24
+[2025-04-13T04:42:05.361+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='acilrestu12' AIRFLOW_CTX_DAG_ID='dag_with_postgres_hooks_v05' AIRFLOW_CTX_TASK_ID='postgres_to_s3' AIRFLOW_CTX_EXECUTION_DATE='2025-04-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-07T00:00:00+00:00'
+[2025-04-13T04:42:05.379+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-04-13T04:42:05.530+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py:175 AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+[2025-04-13T04:42:05.609+0000] {base.py:84} INFO - Retrieving connection 'postgres_localhost'
+[2025-04-13T04:42:05.987+0000] {logging_mixin.py:190} WARNING - --- Logging error ---
+[2025-04-13T04:42:06.010+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2025-04-13T04:42:06.023+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1160, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+[2025-04-13T04:42:06.047+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 999, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+[2025-04-13T04:42:06.054+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 703, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+[2025-04-13T04:42:06.056+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 392, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+[2025-04-13T04:42:06.094+0000] {logging_mixin.py:190} WARNING - TypeError: not all arguments converted during string formatting
+[2025-04-13T04:42:06.102+0000] {logging_mixin.py:190} WARNING - Call stack:
+[2025-04-13T04:42:06.200+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+[2025-04-13T04:42:06.234+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/__main__.py", line 62, in main
+    args.func(args)
+[2025-04-13T04:42:06.249+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+[2025-04-13T04:42:06.258+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+[2025-04-13T04:42:06.264+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+[2025-04-13T04:42:06.309+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 59, in scheduler
+    run_command_with_daemon_option(
+[2025-04-13T04:42:06.323+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+[2025-04-13T04:42:06.336+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 62, in <lambda>
+    callback=lambda: _run_scheduler_job(args),
+[2025-04-13T04:42:06.359+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 48, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+[2025-04-13T04:42:06.381+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+[2025-04-13T04:42:06.404+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+[2025-04-13T04:42:06.445+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+[2025-04-13T04:42:06.448+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/jobs/scheduler_job_runner.py", line 978, in _execute
+    executor.start()
+[2025-04-13T04:42:06.461+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 392, in start
+    self.impl.start()
+[2025-04-13T04:42:06.463+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 330, in start
+    worker.start()
+[2025-04-13T04:42:06.477+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+[2025-04-13T04:42:06.484+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+[2025-04-13T04:42:06.502+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+[2025-04-13T04:42:06.504+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+[2025-04-13T04:42:06.524+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+[2025-04-13T04:42:06.545+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+[2025-04-13T04:42:06.555+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 80, in run
+    return super().run()
+[2025-04-13T04:42:06.558+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+[2025-04-13T04:42:06.568+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+[2025-04-13T04:42:06.574+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 211, in do_work
+    self.execute_work(key=key, command=command)
+[2025-04-13T04:42:06.616+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+[2025-04-13T04:42:06.629+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 100, in execute_work
+    state = self._execute_work_in_fork(command)
+[2025-04-13T04:42:06.698+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+[2025-04-13T04:42:06.725+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 142, in _execute_work_in_fork
+    args.func(args)
+[2025-04-13T04:42:06.728+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+[2025-04-13T04:42:06.731+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+[2025-04-13T04:42:06.756+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+[2025-04-13T04:42:06.773+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+[2025-04-13T04:42:06.788+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+[2025-04-13T04:42:06.820+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+[2025-04-13T04:42:06.852+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+[2025-04-13T04:42:06.868+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+[2025-04-13T04:42:06.900+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/jobs/local_task_job_runner.py", line 171, in _execute
+    self.task_runner.start()
+[2025-04-13T04:42:06.916+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 55, in start
+    self.process = self._start_by_fork()
+[2025-04-13T04:42:06.942+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+[2025-04-13T04:42:06.967+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+[2025-04-13T04:42:06.984+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+[2025-04-13T04:42:07.001+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+[2025-04-13T04:42:07.004+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+[2025-04-13T04:42:07.019+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+[2025-04-13T04:42:07.057+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+[2025-04-13T04:42:07.060+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+[2025-04-13T04:42:07.062+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+[2025-04-13T04:42:07.073+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+[2025-04-13T04:42:07.076+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+[2025-04-13T04:42:07.199+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+[2025-04-13T04:42:07.336+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+[2025-04-13T04:42:07.399+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+[2025-04-13T04:42:07.402+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+[2025-04-13T04:42:07.403+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+[2025-04-13T04:42:07.415+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+[2025-04-13T04:42:07.431+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+[2025-04-13T04:42:07.447+0000] {logging_mixin.py:190} WARNING -   File "/opt/***/dags/dag_with_postgres_hooks.py", line 30, in postges_to_s3
+    logging.info('Saved orders data in the file:', f'dags/get_orders_{ds_nodash}.txt')
+[2025-04-13T04:42:07.451+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 2216, in info
+    root.info(msg, *args, **kwargs)
+[2025-04-13T04:42:07.465+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1539, in info
+    self._log(INFO, msg, args, **kwargs)
+[2025-04-13T04:42:07.485+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1684, in _log
+    self.handle(record)
+[2025-04-13T04:42:07.492+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1700, in handle
+    self.callHandlers(record)
+[2025-04-13T04:42:07.502+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1762, in callHandlers
+    hdlr.handle(record)
+[2025-04-13T04:42:07.505+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1028, in handle
+    self.emit(record)
+[2025-04-13T04:42:07.518+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/log/file_task_handler.py", line 274, in emit
+    self.handler.emit(record)
+[2025-04-13T04:42:07.537+0000] {logging_mixin.py:190} WARNING - Message: 'Saved orders data in the file:'
+Arguments: ('dags/get_orders_20250407.txt',)
+[2025-04-13T04:42:07.710+0000] {base.py:84} INFO - Retrieving connection 'minio_conn'
+[2025-04-13T04:42:07.731+0000] {connection_wrapper.py:325} INFO - AWS Connection (conn_id='minio_conn', conn_type='aws') credentials retrieved from login and password.
+[2025-04-13T04:42:12.387+0000] {hook.py:208} WARNING - Data lineage tracking is disabled. Register a hook lineage reader to start tracking hook lineage.
+[2025-04-13T04:42:12.397+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-13T04:42:12.442+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-04-13T04:42:12.449+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_with_postgres_hooks_v05, task_id=postgres_to_s3, run_id=scheduled__2025-04-07T00:00:00+00:00, execution_date=20250407T000000, start_date=20250413T044203, end_date=20250413T044212
+[2025-04-13T04:42:12.562+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-13T04:42:12.624+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-13T04:42:12.636+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
