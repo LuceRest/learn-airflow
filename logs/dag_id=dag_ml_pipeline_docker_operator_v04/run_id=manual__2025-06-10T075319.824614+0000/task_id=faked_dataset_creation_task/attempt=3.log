@@ -1,0 +1,22 @@
+[2025-06-10T07:56:17.413+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-10T07:56:17.456+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_ml_pipeline_docker_operator_v04.faked_dataset_creation_task manual__2025-06-10T07:53:19.824614+00:00 [queued]>
+[2025-06-10T07:56:17.497+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_ml_pipeline_docker_operator_v04.faked_dataset_creation_task manual__2025-06-10T07:53:19.824614+00:00 [queued]>
+[2025-06-10T07:56:17.500+0000] {taskinstance.py:2866} INFO - Starting attempt 3 of 3
+[2025-06-10T07:56:17.576+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): faked_dataset_creation_task> on 2025-06-10 07:53:19.824614+00:00
+[2025-06-10T07:56:17.602+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_ml_pipeline_docker_operator_v04', 'faked_dataset_creation_task', 'manual__2025-06-10T07:53:19.824614+00:00', '--job-id', '1505', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_with_docker_operator.py', '--cfg-path', '/tmp/tmpsuo2pw0o']
+[2025-06-10T07:56:17.611+0000] {standard_task_runner.py:105} INFO - Job 1505: Subtask faked_dataset_creation_task
+[2025-06-10T07:56:17.602+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=595) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-10T07:56:17.626+0000] {standard_task_runner.py:72} INFO - Started process 602 to run task
+[2025-06-10T07:56:17.731+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_ml_pipeline_docker_operator_v04.faked_dataset_creation_task manual__2025-06-10T07:53:19.824614+00:00 [running]> on host 492eff5bc182
+[2025-06-10T07:56:18.037+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='acilrestu12' AIRFLOW_CTX_DAG_ID='dag_ml_pipeline_docker_operator_v04' AIRFLOW_CTX_TASK_ID='faked_dataset_creation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-06-10T07:53:19.824614+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-10T07:53:19.824614+00:00'
+[2025-06-10T07:56:18.041+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-10T07:56:18.113+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-06-10T07:56:18.120+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\necho "Hey the dataset is ready, let\'s trigger the training process"']
+[2025-06-10T07:56:18.151+0000] {subprocess.py:99} INFO - Output:
+[2025-06-10T07:56:18.159+0000] {subprocess.py:106} INFO - Hey the dataset is ready, let's trigger the training process
+[2025-06-10T07:56:18.162+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-06-10T07:56:18.605+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-10T07:56:18.606+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_ml_pipeline_docker_operator_v04, task_id=faked_dataset_creation_task, run_id=manual__2025-06-10T07:53:19.824614+00:00, execution_date=20250610T075319, start_date=20250610T075617, end_date=20250610T075618
+[2025-06-10T07:56:18.660+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-10T07:56:18.705+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-10T07:56:18.709+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

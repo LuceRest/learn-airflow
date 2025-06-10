@@ -1,0 +1,222 @@
+[2025-06-10T07:53:23.317+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-10T07:53:23.353+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_ml_pipeline_docker_operator_v04.docker_model_train_and_publish_task manual__2025-06-10T07:53:19.824614+00:00 [queued]>
+[2025-06-10T07:53:23.372+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_ml_pipeline_docker_operator_v04.docker_model_train_and_publish_task manual__2025-06-10T07:53:19.824614+00:00 [queued]>
+[2025-06-10T07:53:23.374+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-10T07:53:23.401+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): docker_model_train_and_publish_task> on 2025-06-10 07:53:19.824614+00:00
+[2025-06-10T07:53:23.412+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=284) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-10T07:53:23.414+0000] {standard_task_runner.py:72} INFO - Started process 285 to run task
+[2025-06-10T07:53:23.412+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_ml_pipeline_docker_operator_v04', 'docker_model_train_and_publish_task', 'manual__2025-06-10T07:53:19.824614+00:00', '--job-id', '1502', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_with_docker_operator.py', '--cfg-path', '/tmp/tmpq53mvtm0']
+[2025-06-10T07:53:23.416+0000] {standard_task_runner.py:105} INFO - Job 1502: Subtask docker_model_train_and_publish_task
+[2025-06-10T07:53:23.492+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_ml_pipeline_docker_operator_v04.docker_model_train_and_publish_task manual__2025-06-10T07:53:19.824614+00:00 [running]> on host 492eff5bc182
+[2025-06-10T07:53:23.671+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='acilrestu12' AIRFLOW_CTX_DAG_ID='dag_ml_pipeline_docker_operator_v04' AIRFLOW_CTX_TASK_ID='docker_model_train_and_publish_task' AIRFLOW_CTX_EXECUTION_DATE='2025-06-10T07:53:19.824614+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-10T07:53:19.824614+00:00'
+[2025-06-10T07:53:23.673+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-10T07:53:24.064+0000] {docker.py:367} INFO - Starting docker container from image regression-training-image:v1.0
+[2025-06-10T07:53:24.095+0000] {docker.py:375} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2025-06-10T07:53:35.199+0000] {docker.py:438} INFO - Traceback (most recent call last):
+[2025-06-10T07:53:35.201+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 198, in _new_conn
+[2025-06-10T07:53:35.203+0000] {docker.py:438} INFO - sock = connection.create_connection(
+[2025-06-10T07:53:35.204+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+[2025-06-10T07:53:35.206+0000] {docker.py:438} INFO - raise err
+[2025-06-10T07:53:35.207+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 73, in create_connection
+[2025-06-10T07:53:35.210+0000] {docker.py:438} INFO -     sock.connect(sa)
+[2025-06-10T07:53:35.212+0000] {docker.py:438} INFO - ConnectionRefusedError: [Errno 111] Connection refused
+[2025-06-10T07:53:35.213+0000] {docker.py:438} INFO - 
+[2025-06-10T07:53:35.214+0000] {docker.py:438} INFO - The above exception was the direct cause of the following exception:
+[2025-06-10T07:53:35.216+0000] {docker.py:438} INFO - 
+[2025-06-10T07:53:35.217+0000] {docker.py:438} INFO - Traceback (most recent call last):
+[2025-06-10T07:53:35.218+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+[2025-06-10T07:53:35.220+0000] {docker.py:438} INFO - response = self._make_request(
+[2025-06-10T07:53:35.235+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+[2025-06-10T07:53:35.238+0000] {docker.py:438} INFO - conn.request(
+[2025-06-10T07:53:35.239+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 445, in request
+[2025-06-10T07:53:35.240+0000] {docker.py:438} INFO -     self.endheaders()
+[2025-06-10T07:53:35.241+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/http/client.py", line 1274, in endheaders
+[2025-06-10T07:53:35.242+0000] {docker.py:438} INFO -     self._send_output(message_body, encode_chunked=encode_chunked)
+[2025-06-10T07:53:35.243+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/http/client.py", line 1034, in _send_output
+[2025-06-10T07:53:35.244+0000] {docker.py:438} INFO -     self.send(msg)
+[2025-06-10T07:53:35.246+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/http/client.py", line 974, in send
+[2025-06-10T07:53:35.247+0000] {docker.py:438} INFO -     self.connect()
+[2025-06-10T07:53:35.248+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 276, in connect
+[2025-06-10T07:53:35.249+0000] {docker.py:438} INFO -     self.sock = self._new_conn()
+[2025-06-10T07:53:35.251+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 213, in _new_conn
+[2025-06-10T07:53:35.253+0000] {docker.py:438} INFO -     raise NewConnectionError(
+[2025-06-10T07:53:35.253+0000] {docker.py:438} INFO - urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f20d2b8e490>: Failed to establish a new connection: [Errno 111] Connection refused
+[2025-06-10T07:53:35.254+0000] {docker.py:438} INFO - 
+[2025-06-10T07:53:35.255+0000] {docker.py:438} INFO - The above exception was the direct cause of the following exception:
+[2025-06-10T07:53:35.257+0000] {docker.py:438} INFO - 
+[2025-06-10T07:53:35.258+0000] {docker.py:438} INFO - Traceback (most recent call last):
+[2025-06-10T07:53:35.259+0000] {docker.py:438} INFO -   File "/app/train_and_publish.py", line 22, in <module>
+[2025-06-10T07:53:35.260+0000] {docker.py:438} INFO -     minio_client.fget_object(bucket_name, data_csv_key, "data.csv")
+[2025-06-10T07:53:35.261+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/minio/api.py", line 1051, in fget_object
+[2025-06-10T07:53:35.262+0000] {docker.py:438} INFO - stat = self.stat_object(
+[2025-06-10T07:53:35.263+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/minio/api.py", line 1896, in stat_object
+[2025-06-10T07:53:35.264+0000] {docker.py:438} INFO - response = self._execute(
+[2025-06-10T07:53:35.267+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/minio/api.py", line 418, in _execute
+[2025-06-10T07:53:35.268+0000] {docker.py:438} INFO -     region = self._get_region(bucket_name)
+[2025-06-10T07:53:35.269+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/minio/api.py", line 475, in _get_region
+[2025-06-10T07:53:35.270+0000] {docker.py:438} INFO -     response = self._url_open(
+[2025-06-10T07:53:35.271+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/minio/api.py", line 284, in _url_open
+[2025-06-10T07:53:35.272+0000] {docker.py:438} INFO -     response = self._http.urlopen(
+[2025-06-10T07:53:35.273+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+[2025-06-10T07:53:35.274+0000] {docker.py:438} INFO - response = conn.urlopen(method, u.request_uri, **kw)
+[2025-06-10T07:53:35.276+0000] {docker.py:438} INFO - File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+[2025-06-10T07:53:35.277+0000] {docker.py:438} INFO - return self.urlopen(
+[2025-06-10T07:53:35.281+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+[2025-06-10T07:53:35.283+0000] {docker.py:438} INFO - return self.urlopen(
+[2025-06-10T07:53:35.284+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+[2025-06-10T07:53:35.285+0000] {docker.py:438} INFO - return self.urlopen(
+[2025-06-10T07:53:35.287+0000] {docker.py:438} INFO - [Previous line repeated 2 more times]
+[2025-06-10T07:53:35.288+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+[2025-06-10T07:53:35.290+0000] {docker.py:438} INFO - retries = retries.increment(
+[2025-06-10T07:53:35.291+0000] {docker.py:438} INFO -   File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 519, in increment
+[2025-06-10T07:53:35.293+0000] {docker.py:438} INFO - raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+[2025-06-10T07:53:35.294+0000] {docker.py:438} INFO - urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='host.docker.internal', port=9000): Max retries exceeded with url: /learn-ml-pipeline?location= (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f20d2b8e490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-06-10T07:53:35.929+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://docker-socket-proxy:2375/v1.45/containers/create?name=training_my_awesome_model
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 372, in _run_image
+    return self._run_image_with_mounts([*self.mounts, tmp_mount], add_tmp_variable=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 399, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/container.py", line 440, in create_container
+    return self.create_container_from_config(config, name, platform)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/container.py", line 457, in create_container_from_config
+    return self._result(res, True)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 400 Client Error for http://docker-socket-proxy:2375/v1.45/containers/create?name=training_my_awesome_model: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /tmp/airflowtmp570uuwuc")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 512, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 381, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 446, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 1}
+[2025-06-10T07:53:35.949+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=dag_ml_pipeline_docker_operator_v04, task_id=docker_model_train_and_publish_task, run_id=manual__2025-06-10T07:53:19.824614+00:00, execution_date=20250610T075319, start_date=20250610T075323, end_date=20250610T075335
+[2025-06-10T07:53:35.980+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-10T07:53:35.981+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 1502 for task docker_model_train_and_publish_task (Docker container failed: {'StatusCode': 1}; 285)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://docker-socket-proxy:2375/v1.45/containers/create?name=training_my_awesome_model
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 372, in _run_image
+    return self._run_image_with_mounts([*self.mounts, tmp_mount], add_tmp_variable=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 399, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/container.py", line 440, in create_container
+    return self.create_container_from_config(config, name, platform)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/container.py", line 457, in create_container_from_config
+    return self._result(res, True)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 400 Client Error for http://docker-socket-proxy:2375/v1.45/containers/create?name=training_my_awesome_model: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /tmp/airflowtmp570uuwuc")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 512, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 381, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 446, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 1}
+[2025-06-10T07:53:36.052+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-06-10T07:53:36.079+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-10T07:53:36.086+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
